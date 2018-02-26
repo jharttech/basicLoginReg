@@ -1,0 +1,138 @@
+@media (min-width: 600px) {
+	body{
+		font-family:Arial, Sans-Serif;
+		text-align: center;
+	}
+
+	section{
+		width: 50%;
+		overflow: auto;
+		margin: 0 auto;
+	}
+
+	table#form-contents {
+		display: table-cell;
+		vertical-align: middle;
+		padding: 0;
+		margin: 0 auto;
+	}
+	td{
+		margin: 0 auto;
+		vertical-align: top;
+	}
+	td#login{
+		margin: 0 auto;
+		vertical-align: top;
+		position: relative;
+	}
+
+	div#home{
+		vertical-align: top;
+		text-align: center;
+		width: 45%;
+		display: inline-block;
+	}
+
+	div#form{
+		display: inline-block;
+		margin: 0 auto;
+		vertical-align: top;
+	}
+
+	div#formtwo{
+		display: inline-block;
+		margin: 0 auto;
+	}
+
+	.main{
+		width:50%;
+		margin: 0 auto;
+		display: inline-block;
+	}
+
+	.float{
+		float: left;
+		margin: 0 auto;
+	}
+
+	.half{
+		width: 50%;
+		margin: 0 auto;
+	}
+
+	form{
+		width: 300px;
+		margin: 0 auto;
+	}
+
+	.clearfix:before, .clearfix:after{
+		content: "";
+		display: table;
+	}
+
+	.clearfix:after{
+		clear: both;
+	}
+
+	a{
+		color:#0067ab;
+		text-decoration:none;
+	}
+
+	a:hover{
+		text-decoration:underline;
+	}
+
+	h1{
+		text-align: center;
+	}
+
+
+
+
+input[type='text'], input[type='email'],input[type='password']{
+	width: 200px;
+	border-radius: 10px;
+	border: 1px solid #CCC;
+	padding: 10px;
+	color: #333;
+	font-size: 14px;
+	margin-top: 10px;
+}
+
+input[type='submit']{
+	padding: 10px 25px 8px;
+	color: #fff;
+	background-color: #0067ab;
+	text-shadow: rgna(0,0,0,0.24) 0 1px 0;
+	font-size: 16px;
+	box-shadow: rgba(255,255,255,0.24) 0 2px 0 0 inset,#fff 0 1px 0 0;
+	border: 1px solid #0164a5;
+	border-radius: 10px;
+	margin-top: 10px;
+	cursor:pointer;
+	bottom: 0;
+}
+
+input#login[type='submit']{
+	padding; 10px 25px 8px;
+	color: #fff;
+	background-color: #0067ab;
+	text-shadow: rgna(0,0,0,0,24) 0 1px 0;
+	font-size: 16px;
+	box-shadow: rgba(255,255,255,0.24) 0 2px 0 0 inset,#fff 0 1px 0 0;
+	border: 1px solid #0164a5;
+	border-radius: 10px;
+	margin-top: 10px;
+	cursor: pointer;
+	transform: translate(0px, 58px);
+}
+
+input[type='submit']:hover {
+	background-color: #024978;
+}
+
+input#login[type='submit']:hover{
+	background-color: #024978;
+}
+}
