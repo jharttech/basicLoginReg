@@ -11,8 +11,8 @@ if(($_POST['login']) && isset($_POST['username']) && isset($_POST['userPass'])){
 	$userPass = stripslashes($_REQUEST['userPass']);
 	$userPass = mysqli_real_escape_string($con,$userPass);
 	//Checking is user exists in the database or not
-	$pass = "SELECT userPass, AES_DECRYPT(userPass,'$username') FROM `users` WHERE `username`='$username' AND AES_DECRYPT(userPass, UNHEX(SHA2('$username',512)))='$userPass'";
-	$result = mysqli_query($con,$pass) or die(mysql_error());
+	$pass = "SELECT userPass, AES_DECRYPT(AES_ENCRYPT($userPass, UNHEX(SHA2('$username', 512))), UNHEX(SHA2('$username', 512))) FROM `users` WHERE `username`='$username' AND AES_DECRYPT(AES_ENCRYPT($userPass, UNHEX(SHA2('$username', 512))), UNHEX(SHA2('$username', 512)))='$userPass'";
+	$result = mysqli_query($con,$pass);
 	$rows = mysqli_num_rows($result);
 		if($rows==1){
 			$_SESSION['username'] = $username;

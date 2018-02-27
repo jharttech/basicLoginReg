@@ -14,10 +14,10 @@ if(($_POST['register']) && isset($_REQUEST['username']) && isset($_REQUEST['emai
 	$trn_date = date("Y-m-d H:i:s");
 	//Check to see if username already exists
 	$dbquery = "SELECT username FROM `users` WHERE `username`='$username'";
-	$count = mysqli_query($con,$dbquery) or die(mysql_error());
+	$count = mysqli_query($con,$dbquery);
 	$nrows = mysqli_num_rows($count);
 	if($nrows==0){
-		$query = "INSERT into `users` (username, userPass, email, trn_date) VALUES ('$username', AES_ENCRYPT('$userPass', UNHEX(SHA2('$username',512))), '$email', '$trn_date')";
+		$query = "INSERT into `users` (username, userPass, email, trn_date) VALUES ('$username', AES_ENCRYPT('$userPass', SHA2('$username',512)), '$email', '$trn_date')";
 		$result = mysqli_query($con,$query);
 		if($result && ($_POST['register'])){
 			header("Location: reg_success.html");
@@ -34,7 +34,6 @@ if(($_POST['register']) && isset($_REQUEST['username']) && isset($_REQUEST['emai
 <input type="email" name="email" placeholder="Email" required />
 <input type="password" name="userPass" placeholder="Password" required />
 <input type="submit" name="register" value="Register" />
-<input type="hidden" name="register" value="register" />
 </form>
 </div>
 <?php } ?>
