@@ -1,6 +1,95 @@
-@media (max-width: 599px){
+@media (max-width: 599px) {
 	body{
 		font-family:Arial, Sans-Serif;
+		text-align: center;
+	}
+
+	section{
+		width: 50%;
+		overflow: auto;
+		margin: 0 auto;
+	}
+
+	table#form-contents {
+		vertical-align: middle;
+		text-align: center;
+		padding: 10px;
+		margin: 0 auto;
+	}
+
+	tr#indexr{
+		vertical-align: middle;
+		text-align: center;
+		padding: 10px;
+	}
+
+	td{
+		margin: 0 auto;
+		vertical-align: top;
+	}
+	td#login{
+		margin: 0 auto;
+		vertical-align: top;
+		position: relative;
+	}
+
+	td#user{
+		border-style: solid;
+		border-width: 1px;
+		border-radius: 4px;
+		border-color: #0067ab;
+		padding: 10px;
+	}
+
+	td#edit{
+		vertical-align: middle;
+		padding-right: 7px;
+		padding-left: 8px
+	}
+
+	td#index{
+		vertical-align: middle;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	div#home{
+		vertical-align: top;
+		text-align: center;
+		width: 45%;
+		display: inline-block;
+	}
+
+	div#form{
+		display: inline-block;
+		margin: 0 auto;
+		vertical-align: top;
+	}
+
+	div#formtwo{
+		display: inline-block;
+		margin: 0 auto;
+	}
+
+	.main{
+		width:50%;
+		margin: 0 auto;
+		display: inline-block;
+	}
+
+	.float{
+		float: left;
+		margin: 0 auto;
+	}
+
+	.half{
+		width: 50%;
+		margin: 0 auto;
+	}
+
+	form{
+		width: 300px;
+		margin: 0 auto;
 	}
 
 	.clearfix:before, .clearfix:after{
@@ -12,36 +101,12 @@
 		clear: both;
 	}
 
-	div#form{
-		display: inline-block;
-		margin: 0 auto;
-	}
-
 	a{
 		color:#0067ab;
 		text-decoration:none;
 	}
 
-	a:hover{
-		text-decoration:underline;
-	}
-
-	.form{
-		width: 300px;
-		margin: 0 auto;
-	}
-
-	input[type='text'], input[type='email'],input[type='password']{
-		width: 200px;
-		border-radius: 5px;
-		border: 1px solid #CCC;
-		padding: 10px;
-		color: #333;
-		font-size: 14px;
-		margin-top: 10px;
-	}
-
-	input[type='submit']{
+	a#edit{
 		padding: 10px 25px 8px;
 		color: #fff;
 		background-color: #0067ab;
@@ -49,12 +114,69 @@
 		font-size: 16px;
 		box-shadow: rgba(255,255,255,0.24) 0 2px 0 0 inset,#fff 0 1px 0 0;
 		border: 1px solid #0164a5;
-		border-radius: 5px;
+		border-radius: 10px;
 		margin-top: 10px;
 		cursor:pointer;
+		bottom: 0;
 	}
 
-	input[type='submit']:hover {
-		background-color: #024978;
+	a:hover{
+		text-decoration:underline;
 	}
+
+	h1{
+		text-align: center;
+	}
+
+	tr#head{
+		padding: 10px;
+		border: outset;
+	}
+
+
+
+input[type='text'], input[type='email'],input[type='password']{
+	width: 200px;
+	border-radius: 10px;
+	border: 1px solid #CCC;
+	padding: 10px;
+	color: #333;
+	font-size: 14px;
+	margin-top: 10px;
+}
+
+input[type='submit']{
+	padding: 10px 25px 8px;
+	color: #fff;
+	background-color: #0067ab;
+	text-shadow: rgna(0,0,0,0.24) 0 1px 0;
+	font-size: 16px;
+	box-shadow: rgba(255,255,255,0.24) 0 2px 0 0 inset,#fff 0 1px 0 0;
+	border: 1px solid #0164a5;
+	border-radius: 10px;
+	margin-top: 10px;
+	cursor:pointer;
+	bottom: 0;
+}
+
+input#login[type='submit']{
+	padding; 10px 25px 8px;
+	color: #fff;
+	background-color: #0067ab;
+	text-shadow: rgna(0,0,0,0,24) 0 1px 0;
+	font-size: 16px;
+	box-shadow: rgba(255,255,255,0.24) 0 2px 0 0 inset,#fff 0 1px 0 0;
+	border: 1px solid #0164a5;
+	border-radius: 10px;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+input[type='submit']:hover {
+	background-color: #024978;
+}
+
+input#login[type='submit']:hover{
+	background-color: #024978;
+}
 }

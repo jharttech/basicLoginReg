@@ -3,15 +3,16 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<title>Registration Error</title>
+		<title>New Add Error</title>
 		<link rel="stylesheet" media="screen and (min-width: 600px)" href="./css/style.css" />
 		<link rel="stylesheet" media="screen and (max-width: 599px)" href="./css/mstyle.css">
 	</head>
 	<body>
-		<div>
-			<h3>Username already exists.  Please try a different Username.</h3>
-			<br/><br/><a id="edit" href='singleLogin.php'>Login</a>
-			<br/><p><a id="edit" href='singlereg.php'>Register</a></p>
-		</div>
+		<section>
+			<div class="form">
+				<h3>Please fill in all information for new user.</h3>
+				<?php include 'newUser.php';?>
+			</div>
+		</section>
 	</body>
 </html>

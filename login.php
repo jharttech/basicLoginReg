@@ -11,15 +11,24 @@ if(($_POST['login']) && isset($_POST['username']) && isset($_POST['userPass'])){
 	$userPass = stripslashes($_REQUEST['userPass']);
 	$userPass = mysqli_real_escape_string($con,$userPass);
 	//Checking is user exists in the database or not
-	$pass = "SELECT userPass, AES_DECRYPT(AES_ENCRYPT('$userPass', UNHEX(SHA2('$username', 512))), UNHEX(SHA2('$username', 512))) FROM `users` WHERE `username`='$username' AND AES_DECRYPT(AES_ENCRYPT('$userPass', UNHEX(SHA2('$username', 512))), UNHEX(SHA2('$username', 512)))='$userPass'";
+	$pass = "SELECT *, AES_DECRYPT(userPass, SHA2('$username', 512)) FROM `users` WHERE `username`='$username'";
 	$result = mysqli_query($con,$pass);
+	while($check=mysqli_fetch_array($result)){
+		$verify=$check["AES_DECRYPT(userPass, SHA2('$username', 512))"];
+		$id=$check["id"];}
 	$rows = mysqli_num_rows($result);
-		if($rows==1){
+		if($rows==1 && $verify == $userPass){
+			if($id==1){
 			$_SESSION['username'] = $username;
+				//Redirect user to a_index.php
+			header("Location: a_index.php");
+			} else{
 				//Redirect user to index.php
-			header("Location: index.php");
-		}else if(($_POST['login']) && $rows!=1){
-			header("Location: login_err.html");
+				$_SESSION['username'] = $username;
+				header("Location: index.php");
+			}
+		}elseif(($_POST['login']) && $verify != $userPass){
+			header("Location: login_err.php");
 		}
 } else{
 

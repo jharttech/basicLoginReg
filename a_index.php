@@ -7,8 +7,8 @@ include("auth.php");
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<title>Welcome Home</title>
-		<link rel="stylesheet" media="screen and (min-width: 600px)" href="css/style.css" />
+<		title>Welcome Home</title>
+<		link rel="stylesheet" media="screen and (min-width: 600px)" href="css/style.css" />
 		<link rel="stylesheet" media="screen and (max-width: 599px)" href="css/mstyle.css" />
 	</head>
 	<body>
@@ -16,6 +16,11 @@ include("auth.php");
 			<h1>Welcome <?php echo $_SESSION['username']; ?>!</h1>
 			<h2>What would you like to do?</h2>
 			<table id="form-contents">
+				<tr id="indexr">
+					<td id="index">
+						<a id="edit" href="adj_users.php">Edit Users</a></br>
+					</td>
+				</tr>
 				<tr id="indexr">
 					<td id="index">
 						<a id="edit" href="doc.php">Online Documentation</a></br>

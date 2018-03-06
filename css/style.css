@@ -11,11 +11,18 @@
 	}
 
 	table#form-contents {
-		display: table-cell;
 		vertical-align: middle;
-		padding: 0;
+		text-align: center;
+		padding: 10px;
 		margin: 0 auto;
 	}
+
+	tr#indexr{
+		vertical-align: middle;
+		text-align: center;
+		padding: 10px;
+	}
+
 	td{
 		margin: 0 auto;
 		vertical-align: top;
@@ -24,6 +31,26 @@
 		margin: 0 auto;
 		vertical-align: top;
 		position: relative;
+	}
+
+	td#user{
+		border-style: solid;
+		border-width: 1px;
+		border-radius: 4px;
+		border-color: #0067ab;
+		padding: 10px;
+	}
+
+	td#edit{
+		vertical-align: middle;
+		padding-right: 7px;
+		padding-left: 8px
+	}
+
+	td#index{
+		vertical-align: middle;
+		padding-top: 10px;
+		padding-bottom: 10px;
 	}
 
 	div#home{
@@ -79,6 +106,20 @@
 		text-decoration:none;
 	}
 
+	a#edit{
+		padding: 10px 25px 8px;
+		color: #fff;
+		background-color: #0067ab;
+		text-shadow: rgna(0,0,0,0.24) 0 1px 0;
+		font-size: 16px;
+		box-shadow: rgba(255,255,255,0.24) 0 2px 0 0 inset,#fff 0 1px 0 0;
+		border: 1px solid #0164a5;
+		border-radius: 10px;
+		margin-top: 10px;
+		cursor:pointer;
+		bottom: 0;
+	}
+
 	a:hover{
 		text-decoration:underline;
 	}
@@ -87,6 +128,10 @@
 		text-align: center;
 	}
 
+	tr#head{
+		padding: 10px;
+		border: outset;
+	}
 
 
 

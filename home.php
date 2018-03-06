@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<title>Login</title>
 		<link rel="stylesheet" media="screen and (min-width: 600px)" href="./css/style.css" />
-		<link rel="stylesheet" media="screen and (max-width: 599px)" href="./css/mstyle.css">
+		<link rel="stylesheet" media="screen and (max-width: 599px)" href="./css/mstyle.css" />
 	</head>
 	<body>
 		<div id="form">
