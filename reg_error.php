@@ -10,8 +10,14 @@
 	<body>
 		<div>
 			<h3>Username already exists.  Please try a different Username.</h3>
-			<br/><br/><a id="edit" href='singleLogin.php'>Login</a>
-			<br/><p><a id="edit" href='singlereg.php'>Register</a></p>
+			<form action="" method="post" name="singleLog">
+			<input type="submit" name="singlelog" value="Login" />
+			<?php if(($_POST['singlelog'])){
+				header("Location: singleLogin.php");} ?>
+			<form action="" method="post" name="singleReg">
+			<input type="submit" name="singleReg" value="Register" />
+			<?php if(($_POST['singleReg'])){
+				header("Location: singlereg.php");} ?>
 		</div>
 	</body>
 </html>

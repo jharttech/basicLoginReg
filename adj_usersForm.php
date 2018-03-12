@@ -31,15 +31,23 @@ while($row=mysqli_fetch_array($result)){
 	echo '<td id="user">' . $row['id'] . '</td>';
 	echo '<td id="user">' . $row['username'] . '</td>';
 	echo '<td id="user">' . $row['email'] . '</td>';
-	echo '<td id="edit"><a id="edit" href="editUser.php?id=' . $row['id'] . '">Edit</a></td>';
-	echo '<td id="edit"><a id="edit" href="deleteUser.php?id=' . $row['id'] . '">Delete</a></td>';
+	echo '<td><form id="small" action="" method="post" name="edituser"><input id="small" type="submit" name="'. $row['id'] . '" value="Edit" /></td>';
+	echo '<td><input id="small" type="submit" name="'. $row['username'] . '" value="Delete" /></td></form>';
+	if(($_POST[$row['id']])){
+		header("Location: editUser.php?id=$row[id]");
+	}elseif(($_POST[$row['username']])){
+		header("Location: deleteUser.php?id=$row[id]");};}
 	echo "</tr>";
-}
+	echo "</table>";
 
-echo "</table>"
 ?>
-<p></br></br><a id="edit" href="newUser.php">Add a new user</a></p></br>
-<p><a id="edit" href="a_index.php">Admin Page</a></p>
+<form id="small"  action="" method="post" name="nav">
+<input id="small" type="submit" name="addNew" value="Add New User" />
+<input id="small" type="submit" name="adminP" value="Admin Page" />
+<?php if(($_POST['addNew'])){
+	header("Location: newUser.php");
+	}elseif(($_POST['adminP'])){
+		header("Location: a_index.php");} ?>
 </body>
 </html>
 

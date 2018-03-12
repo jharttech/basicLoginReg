@@ -92,6 +92,10 @@
 		margin: 0 auto;
 	}
 
+	form#small{
+		width: auto;
+	}
+
 	.clearfix:before, .clearfix:after{
 		content: "";
 		display: table;
@@ -160,7 +164,7 @@ input[type='submit']{
 }
 
 input#login[type='submit']{
-	padding; 10px 25px 8px;
+	padding: 10px 25px 8px;
 	color: #fff;
 	background-color: #0067ab;
 	text-shadow: rgna(0,0,0,0,24) 0 1px 0;
@@ -171,6 +175,10 @@ input#login[type='submit']{
 	margin-top: 10px;
 	cursor: pointer;
 	transform: translate(0px, 58px);
+}
+
+input#small[type='submit']{
+	padding: 3px 10px 3px;
 }
 
 input[type='submit']:hover {

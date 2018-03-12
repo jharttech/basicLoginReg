@@ -10,7 +10,10 @@
 	<body>
 		<div>
 			<h3>User has been successfully removed.</h3>
-			<a id="edit" href="a_index.php">Admin Page</a>
+			<form id="small" action="" method="post" name="delsuc">
+			<input id="small" type="submit" name="adminp" value="Admin Page" />
+			<?php if(($_POST['adminp'])){
+					header("Location: a_index.php");} ?>
 		</div>
 	</body>
 </html>

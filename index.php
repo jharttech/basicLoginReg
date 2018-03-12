@@ -18,12 +18,18 @@ include("auth.php");
 			<table id="form-contents">
 				<tr id="indexr">
 					<td id="index">
-						<a id="edit" href="doc.php">Online Documentation</a></br>
+						<form action="" method="post" name="documents">
+						<input type="submit" name="docu" value="Online Documentation" />
+						<?php if(($_POST['docu'])){
+							header("Location: doc.php");} ?>
 					</td>
 				</tr>
 				<tr id="indexr">
 					<td id="index">
-						<a id="edit" href="logout.php">Logout</a></br>
+						<form action="" method="post" name="logout">
+						<input type="submit" name="logout" value="Logout" />
+						<?php if(($_POST['logout'])){
+							header("Location: logout.php");} ?>
 					</td>
 				</tr>
 			</table>
