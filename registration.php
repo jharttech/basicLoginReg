@@ -35,7 +35,7 @@ if(($_POST['register']) && isset($_REQUEST['username']) && isset($_REQUEST['emai
 		}else if(($_POST['register']) && $verPass!=$tempRegVer){
 			$drop = "DELETE from `users` WHERE `username`='$username' AND `email`='$email'";
 			$dropRow = mysqli_query($con,$drop);
-			header("Location: reg_error.php");}
+			header("Location: reg_errorVer.php");}
 	} else if(($_POST['register'])){
 		header("Location: reg_error.php");
 			exit();
