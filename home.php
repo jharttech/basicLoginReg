@@ -15,6 +15,7 @@
 					<?php include 'registration.php';?>
 		</div>
 	</body>
+		<?php include 'footer.html';?>
 </html>
 
 
