@@ -25,6 +25,7 @@
 
 	td{
 		margin: 0 auto;
+		vertical-align: top;
 	}
 	td#login{
 		margin: 0 auto;
@@ -187,4 +188,22 @@ input[type='submit']:hover {
 input#login[type='submit']:hover{
 	background-color: #024978;
 }
+
+img#logo{
+	height: 5%;
+	width: 10%;
+	bottom: 0;
+	left: 0;
+	position: fixed;
+}
+
+img#github{
+	height: 5%;
+	width: 10%;
+	bottom: 0;
+	position: fixed;
+	right: 0;
+}
+
+
 }
