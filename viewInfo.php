@@ -1,6 +1,6 @@
 <?php
-$file = '../../login_reg-defaults/pdf.pdf';
-$filename = 'pdf.pdf';
+$file = 'INSERT YOUR PATH TO FILE HERE';
+$filename = 'INSERT YOUR FILENAME HERE';
 header('Content-type: application/pdf');
 header('Content-Disposition: inline; filename="' . $filename . '"');
 header('Content-Transfer-Encoding: binary');
