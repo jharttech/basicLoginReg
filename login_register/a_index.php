@@ -16,20 +16,31 @@ include("auth.php");
 			<h1>Welcome <?php echo $_SESSION['username']; ?>!</h1>
 			<h2>What would you like to do?</h2>
 			<table id="form-contents">
-				<tr id="indexr">
-					<td id="index">
-						<form action="" method="post" name="documents">
-						<input type="submit" name="docu" value="Online Documentation" />
-						<?php if(($_POST['docu'])){
-							header("Location: docs.php");} ?>
+				<tr>
+					<td>
+						<form action="" method="post" name="editUsers">
+						<input type="submit" name="edituser" value="Edit Users" />
+						<?php if(($_POST['edituser'])){
+							header("Location: adj_users.php");} ?>
+						</form>
 					</td>
 				</tr>
-				<tr id="indexr">
-					<td id="index">
+				<tr>
+					<td>
+						<form action="" method="post" name="docs">
+						<input type="submit" name="docOnline" value="Online Documentation" />
+						<?php if(($_POST['docOnline'])){
+							header("Location: docs.php");} ?>
+						</form>
+					</td>
+				</tr>
+				<tr>
+					<td>
 						<form action="" method="post" name="logout">
 						<input type="submit" name="logout" value="Logout" />
 						<?php if(($_POST['logout'])){
 							header("Location: logout.php");} ?>
+						</form>
 					</td>
 				</tr>
 			</table>

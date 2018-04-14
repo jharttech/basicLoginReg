@@ -19,9 +19,9 @@ include("auth.php");
 				<tr id="indexr">
 					<td id="index">
 						<form action="" method="post" name="documents">
-						<input type="submit" name="docu" value="Online Documentation" />
+						<input type="submit" name="docu" value="Proceedural Manual" />
 						<?php if(($_POST['docu'])){
-							header("Location: docs.php");} ?>
+							header("Location: viewInfo.php");} ?>
 					</td>
 				</tr>
 				<tr id="indexr">
